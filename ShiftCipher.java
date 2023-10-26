@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class ShiftCipher {
     String encryptMessage(String message, int shift) {
         String result = "";
@@ -31,18 +30,13 @@ public class ShiftCipher {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        CoolShiftCipher cipher = new CoolShiftCipher();
-
+        ShiftCipher cipher = new ShiftCipher();
         System.out.println("Yo, give me some text to encrypt: ");
         String plaintext = scanner.next();
-
         System.out.println("How much shift do you want? ");
         int shift = scanner.nextInt();
-
         String encryptedText = cipher.encryptMessage(plaintext, shift);
-
         System.out.println("\nHere's your encrypted text: " + encryptedText);
-
         String decryptedText = cipher.decryptMessage(encryptedText, shift);
         System.out.println("\nAnd here's your decrypted text: " + decryptedText);
     }
