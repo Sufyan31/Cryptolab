@@ -1,7 +1,7 @@
 import static java.lang.Character.isUpperCase;
 import java.util.Scanner;
 
-public class TranspositionCipher {
+public class AffineCipher {
     public static void encodeMessage(int a, int b, String secretText) {
         String encodedMessage = "";
         if (findMultiplicativeInverse(a) == -1) {
